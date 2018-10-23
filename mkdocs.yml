@@ -1,0 +1,105 @@
+
+# Project information
+site_name: nRF52 FIDO U2F Security Key
+site_description: An Open-Source FIDO U2F implementation on nRF52 SoC 
+site_author: makerdiary
+site_url: https://wiki.makerdiary.com/nrf52-u2f/
+
+# Repository
+repo_name: nrf52-u2f
+repo_url: https://github.com/makerdiary/nrf52-u2f
+edit_uri: "https://github.com/makerdiary/nrf52-u2f/docs"
+
+# Copyright
+copyright: 'Copyright &copy; 2018 <a href="https://makerdiary.com">makerdiary</a>'
+
+# Configuration
+theme:
+  name: null
+  custom_dir: 'material'
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: true
+  palette:
+    primary: marsala
+    accent: marsala
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: 'images/favicon.png'
+  logo: 'images/logo.svg'
+
+# Customization
+extra:
+  social:
+    - type: comments
+      link: https://community.makerdiary.com
+    - type: globe
+      link: https://makerdiary.com
+    - type: github-alt
+      link: https://github.com/makerdiary
+    - type: twitter
+      link: https://twitter.com/makerdiary
+    - type: facebook
+      link: https://www.facebook.com/makerdiary
+#  disqus: 'makerdiary'
+#  discourse: 'community.makerdiary.com'
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+pages:
+  - Introduction: index.md
+  - Getting Started: getting-started/index.md
+  - Upgrading Firmware : upgrading/index.md
+  - Building the Firmware: building/index.md
+  - Contributing: CONTRIBUTING.md
+  - License: LICENSE.md
+  - User Guides:
+    - Using nRF52-U2F with Google: guides/using-u2f-with-google.md
+    - Using nRF52-U2F with Facebook: guides/using-u2f-with-facebook.md
+    - Using nRF52-U2F with Twitter: guides/using-u2f-with-twitter.md
+    - Using nRF52-U2F with GitHub: guides/using-u2f-with-github.md
+    - Using nRF52-U2F with GitLab: guides/using-u2f-with-gitlab.md
+ 
+
+# Google Analytics
+google_analytics:
+  - 'UA-54344624-2'
+  - 'auto'
