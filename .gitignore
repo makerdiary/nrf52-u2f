@@ -20,4 +20,3 @@ site
 .build
 .mbed
 projectfiles
-*.py*
