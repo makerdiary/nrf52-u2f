@@ -1,0 +1,740 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="An Open-Source FIDO U2F implementation on nRF52 SoC">
+      
+      
+        <link rel="canonical" href="https://wiki.makerdiary.com/nrf52-u2f/guides/using-u2f-with-google/">
+      
+      
+        <meta name="author" content="makerdiary">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>Using nRF52-U2F with Google - nRF52 FIDO U2F Security Key</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.c61db26e.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="marsala" data-md-color-accent="marsala">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#using-nrf52-u2f-security-key-with-google" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://wiki.makerdiary.com/nrf52-u2f/" title="nRF52 FIDO U2F Security Key" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                nRF52 FIDO U2F Security Key
+              </span>
+              <span class="md-header-nav__topic">
+                Using nRF52-U2F with Google
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/makerdiary/nrf52-u2f/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      nrf52-u2f
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Introduction" class="md-tabs__link">
+        Introduction
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="User Guides" class="md-tabs__link md-tabs__link--active">
+          User Guides
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../images/logo.svg" width="48" height="48">
+      
+    </span>
+    nRF52 FIDO U2F Security Key
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/makerdiary/nrf52-u2f/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      nrf52-u2f
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrading/" title="Upgrading Firmware" class="md-nav__link">
+      Upgrading Firmware
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../building/" title="Building the Firmware" class="md-nav__link">
+      Building the Firmware
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../CONTRIBUTING/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../LICENSE/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      User Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        User Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Using nRF52-U2F with Google
+      </label>
+    
+    <a href="./" title="Using nRF52-U2F with Google" class="md-nav__link md-nav__link--active">
+      Using nRF52-U2F with Google
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" title="Requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-your-google-account" title="Setting Up Your Google Account" class="md-nav__link">
+    Setting Up Your Google Account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signing-in-using-your-key" title="Signing in using your key" class="md-nav__link">
+    Signing in using your key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-issue" title="Create an Issue" class="md-nav__link">
+    Create an Issue
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-u2f-with-facebook/" title="Using nRF52-U2F with Facebook" class="md-nav__link">
+      Using nRF52-U2F with Facebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-u2f-with-twitter/" title="Using nRF52-U2F with Twitter" class="md-nav__link">
+      Using nRF52-U2F with Twitter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-u2f-with-github/" title="Using nRF52-U2F with GitHub" class="md-nav__link">
+      Using nRF52-U2F with GitHub
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-u2f-with-gitlab/" title="Using nRF52-U2F with GitLab" class="md-nav__link">
+      Using nRF52-U2F with GitLab
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" title="Requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-your-google-account" title="Setting Up Your Google Account" class="md-nav__link">
+    Setting Up Your Google Account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signing-in-using-your-key" title="Signing in using your key" class="md-nav__link">
+    Signing in using your key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-issue" title="Create an Issue" class="md-nav__link">
+    Create an Issue
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/makerdiary/nrf52-u2f/docs/guides/using-u2f-with-google.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="using-nrf52-u2f-security-key-with-google">Using nRF52 U2F Security Key with Google<a class="headerlink" href="#using-nrf52-u2f-security-key-with-google" title="Permanent link">&para;</a></h1>
+<p>This guide describes how to use the nRF52 U2F Security Key with your Google Account.</p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Latest version of Google Chrome browser (or at least version 38) or Opera browser</p>
+</li>
+<li>
+<p><a href="https://store.makerdiary.com/collections/frontpage/products/nrf52840-mdk-iot-development-kit">nRF52840-MDK</a> or <a href="https://store.makerdiary.com/collections/frontpage/products/nrf52840-mdk-usb-dongle">nRF52840 Micro Dev Kit USB Dongle</a> with the nRF52-U2F firmware</p>
+</li>
+<li>
+<p>A Google Account (such as Gmail, Google Docs, YouTube, Google+)</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If no firmware available, please follow these guides to prepare the correct firmware: <a href="../../upgrading/">Upgrading the firmware</a> or <a href="../../building">Building the firmware</a>.</p>
+</div>
+<h2 id="setting-up-your-google-account">Setting Up Your Google Account<a class="headerlink" href="#setting-up-your-google-account" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><a href="https://support.google.com/accounts/answer/9096865?hl=en&amp;visit_id=636755555485133774-251791244&amp;rd=1">Turn on 2-Step Verification</a>. If the 2-Step Verification is ON, continue with the next step.</p>
+</li>
+<li>
+<p><a href="https://myaccount.google.com/signinoptions/two-step-verification">Add the nRF52 U2F Security Key for 2-Step Verification</a>. On <strong>Security Key</strong> option, click <strong>ADD SECURITY KEY</strong>.</p>
+<p><img alt="" src="../images/add-u2f-key-with-google-1.png" /></p>
+</li>
+<li>
+<p>Prepare a nRF52 U2F Security Key. Insert your key into your USB port, and press the button on the key when the BLUE LED begins to blink.</p>
+<p><img alt="" src="../images/add-u2f-key-with-google-2.png" /></p>
+</li>
+<li>
+<p>Your security key is registered. Enter a name to complete this step.</p>
+<p><img alt="" src="../images/add-u2f-key-with-google-3.png" /></p>
+</li>
+<li>
+<p>Set up at least one backup option so that you can sign in even if your other second steps aren't available.</p>
+</li>
+</ol>
+<p>Your U2F Key is now registered to your account as your default 2-Step Verification device! </p>
+<p>If you accidentally lose a key, come here and remove that key from your account. No one could log in to your account, though, because they would still need to know your username and password.</p>
+<h2 id="signing-in-using-your-key">Signing in using your key<a class="headerlink" href="#signing-in-using-your-key" title="Permanent link">&para;</a></h2>
+<p>Now you can sign in to your Google Account with the security key you add before.</p>
+<ol>
+<li>
+<p>On your computer, <a href="https://accounts.google.com/">sign in to your Google Account</a>. Your device will detect that your account has a security key.</p>
+</li>
+<li>
+<p>Insert your key into the USB port in your computer.</p>
+<p><img alt="" src="../images/sign-in-to-google-with-u2f.png" /></p>
+</li>
+<li>
+<p>When the BLUE LED begins to blink, press the button on the key.</p>
+</li>
+</ol>
+<p><strong>Congratulations!</strong> You can use your key each time you sign in to your Google Account.</p>
+<h2 id="create-an-issue">Create an Issue<a class="headerlink" href="#create-an-issue" title="Permanent link">&para;</a></h2>
+<p>Interested in contributing to this project? Want to report a bug? Feel free to click here:</p>
+<p><a href="https://github.com/makerdiary/nrf52-u2f/issues/new"><button data-md-color-primary="marsala"><i class="fa fa-github"></i> Create an Issue</button></a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../LICENSE/" title="License" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                License
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../using-u2f-with-facebook/" title="Using nRF52-U2F with Facebook" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Using nRF52-U2F with Facebook
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 <a href="https://makerdiary.com">makerdiary</a>
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://community.makerdiary.com" class="md-footer-social__link fa fa-comments"></a>
+    
+      <a href="https://makerdiary.com" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/makerdiary" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/makerdiary" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.facebook.com/makerdiary" class="md-footer-social__link fa fa-facebook"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.daa92ae3.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-54344624-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

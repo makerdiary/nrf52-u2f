@@ -1,0 +1,339 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "nRF52 FIDO U2F Security Key \nAn Open-Source FIDO U2F implementation on nRF52 SoC\n\n\nDescription\n\n\nnRF52-U2F is an open-source FIDO U2F implementation on nRF52 SoC. Taking advantage of Nordic\u2019s powerful SoC \nnRF52840\n and \nnRF5 SDK\n, it's quite easy to make a FIDO U2F key with a number of distinguishing features, such as USB HID class modules, comprehensive cryptography library with ARM\u00ae TrustZone\u00ae Cryptocell-310, reliable Device Firmware Update (DFU), etc.\n\n\nThe FIDO Universal 2\nnd\n Factor (U2F) is an open authentication standard that allows online services to augment the security of their existing password infrastructure by adding a strong second factor to user login. \n\n\nDuring registration and authentication, the user presents the second factor by simply pressing a button on a FIDO U2F key. The user can use their FIDO U2F key across all online services that support the protocol leveraging built-in support in web browsers.\n\n\nFIDO U2F has been successfully deployed by large scale online services, including \nGoogle\n, \nFacebook\n, \nTwitter\n, \nGitHub\n, \nGitLab\n, and many more.\n\n\n\n\nThe FIDO U2F technical specifications are hosted by the open-authentication industry consortium known as the \nFIDO Alliance\n. Learn more about U2F on \nhttps://fidoalliance.org/\n.\n\n\nFeatures\n\n\n\n\n\n\nSupport Nordic nRF52840 System-on-Chip\n\n\n\n\nARM\u00ae Cortex\u00ae-M4F processor optimized for ultra-low power operation\n\n\nCombining \nBluetooth 5\n, \nBluetooth Mesh\n, \nThread\n, \nIEEE 802.15.4\n, \nANT\n and \n2.4GHz\n\n\nOn-chip NFC-A tag\n\n\nOn-chip USB 2.0 (Full speed) controller\n\n\nARM TrustZone\u00ae Cryptocell-310 security subsystem\n\n\n1 MB FLASH and 256 KB RAM\n\n\n\n\n\n\n\n\nStandard FIDO U2F Protocol supported\n\n\n\n\nDriver-less installation on all major host platforms\n\n\nMulti-application support with concurrent application access without the need for serialization and centralized dispatching.\n\n\nComprehensive cryptography library with ARM\u00ae TrustZone\u00ae Cryptocell-310\n\n\nReliable Device Firmware Update (DFU)\n\n\n\n\nHow it works?\n\n\nThe following diagram explains the basic process flow of FIDO U2F:\n\n\n\n\nSupported Boards\n\n\nThe following developmet boards are supported well and it's easy to port to other nRF52840 boards. More boards are planned and will show up gradually over time.\n\n\n\n\n\n\n\n\nnRF52840-MDK\n\n\nnRF52840 Micro Dev Kit USB Dongle\n\n\n\n\n\n\n\n\n\n\n \nGet One!\n\n\n \nGet One!\n\n\n\n\n\n\n\n\nSupported Services\n\n\nThere are a list of featured services that use FIDO U2F. More services will deploy U2F and will show up here over time.\n\n\n\n\n\n\n\n\nService\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoogle\n\n\nFacebook\n\n\nTwitter\n\n\nGitHub\n\n\n\n\n\n\nGitLab\n\n\nyubico demo\n\n\n\n\n\n\n\n\n\n\n\n\nReference\n\n\n\n\nFIDO U2F Specifications\n\n\nmakerdiary/nrf52-u2f\n\n\nnRF52840-MDK Docs\n\n\nnRF52840 Micro Dev Kit USB Dongle Docs\n\n\nMore about nRF52840\n\n\n\n\nCreate an Issue\n\n\nInterested in contributing to this project? Want to report a bug? Feel free to click here:\n\n\n Create an Issue", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#nrf52-fido-u2f-security-key-an-open-source-fido-u2f-implementation-on-nrf52-soc", 
+            "text": "", 
+            "title": "nRF52 FIDO U2F Security Key An Open-Source FIDO U2F implementation on nRF52 SoC"
+        }, 
+        {
+            "location": "/#description", 
+            "text": "nRF52-U2F is an open-source FIDO U2F implementation on nRF52 SoC. Taking advantage of Nordic\u2019s powerful SoC  nRF52840  and  nRF5 SDK , it's quite easy to make a FIDO U2F key with a number of distinguishing features, such as USB HID class modules, comprehensive cryptography library with ARM\u00ae TrustZone\u00ae Cryptocell-310, reliable Device Firmware Update (DFU), etc.  The FIDO Universal 2 nd  Factor (U2F) is an open authentication standard that allows online services to augment the security of their existing password infrastructure by adding a strong second factor to user login.   During registration and authentication, the user presents the second factor by simply pressing a button on a FIDO U2F key. The user can use their FIDO U2F key across all online services that support the protocol leveraging built-in support in web browsers.  FIDO U2F has been successfully deployed by large scale online services, including  Google ,  Facebook ,  Twitter ,  GitHub ,  GitLab , and many more.   The FIDO U2F technical specifications are hosted by the open-authentication industry consortium known as the  FIDO Alliance . Learn more about U2F on  https://fidoalliance.org/ .", 
+            "title": "Description"
+        }, 
+        {
+            "location": "/#features", 
+            "text": "Support Nordic nRF52840 System-on-Chip   ARM\u00ae Cortex\u00ae-M4F processor optimized for ultra-low power operation  Combining  Bluetooth 5 ,  Bluetooth Mesh ,  Thread ,  IEEE 802.15.4 ,  ANT  and  2.4GHz  On-chip NFC-A tag  On-chip USB 2.0 (Full speed) controller  ARM TrustZone\u00ae Cryptocell-310 security subsystem  1 MB FLASH and 256 KB RAM     Standard FIDO U2F Protocol supported   Driver-less installation on all major host platforms  Multi-application support with concurrent application access without the need for serialization and centralized dispatching.  Comprehensive cryptography library with ARM\u00ae TrustZone\u00ae Cryptocell-310  Reliable Device Firmware Update (DFU)", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/#how-it-works", 
+            "text": "The following diagram explains the basic process flow of FIDO U2F:", 
+            "title": "How it works?"
+        }, 
+        {
+            "location": "/#supported-boards", 
+            "text": "The following developmet boards are supported well and it's easy to port to other nRF52840 boards. More boards are planned and will show up gradually over time.     nRF52840-MDK  nRF52840 Micro Dev Kit USB Dongle        Get One!    Get One!", 
+            "title": "Supported Boards"
+        }, 
+        {
+            "location": "/#supported-services", 
+            "text": "There are a list of featured services that use FIDO U2F. More services will deploy U2F and will show up here over time.     Service         Google  Facebook  Twitter  GitHub    GitLab  yubico demo", 
+            "title": "Supported Services"
+        }, 
+        {
+            "location": "/#reference", 
+            "text": "FIDO U2F Specifications  makerdiary/nrf52-u2f  nRF52840-MDK Docs  nRF52840 Micro Dev Kit USB Dongle Docs  More about nRF52840", 
+            "title": "Reference"
+        }, 
+        {
+            "location": "/#create-an-issue", 
+            "text": "Interested in contributing to this project? Want to report a bug? Feel free to click here:   Create an Issue", 
+            "title": "Create an Issue"
+        }, 
+        {
+            "location": "/getting-started/", 
+            "text": "Getting Started with nRF52 FIDO U2F Key\n\n\nThis guide shows you how to get started with the nRF52 FIDO U2F Security Key. The following development boards are available to this nRF52-U2F implementation: \n\n\n\n\n\n\n\n\nnRF52840-MDK\n\n\nnRF52840 Micro Dev Kit USB Dongle\n\n\n\n\n\n\n\n\n\n\n \nGet One!\n\n\n \nGet One!\n\n\n\n\n\n\n\n\nIf you have already one of these two boards, congratulations, let's go ahead! \n\n\nSo how do you set it up to protect your online service accounts? Follow these easy instructions and you'll set up your nRF52 U2F Key with online services that support FIDO U2F protocol (e.g. Google Account).\n\n\nRequirements\n\n\n\n\n\n\nLatest version of Google Chrome browser (or at least version 38) or Opera browser\n\n\n\n\n\n\nnRF52840-MDK\n or \nnRF52840 Micro Dev Kit USB Dongle\n with the nRF52-U2F firmware\n\n\n\n\n\n\nA Google Account (such as Gmail, Google Docs, YouTube, Google+)\n\n\n\n\n\n\n\n\nNote\n\n\nIf no firmware available, please follow these guides to prepare the correct firmware: \nUpgrading the firmware\n or \nBuilding the firmware\n.\n\n\n\n\nSetting Up Your Google Account\n\n\n\n\n\n\nTurn on 2-Step Verification\n. If the 2-Step Verification is ON, continue with the next step.\n\n\n\n\n\n\nAdd the nRF52 U2F Security Key for 2-Step Verification\n. On \nSecurity Key\n option, click \nADD SECURITY KEY\n.\n\n\n\n\n\n\n\n\nPrepare a nRF52 U2F Security Key. Insert your key into your USB port, and press the button on the key when the BLUE LED begins to blink.\n\n\n\n\n\n\n\n\nYour security key is registered. Enter a name to complete this step.\n\n\n\n\n\n\n\n\nSet up at least one backup option so that you can sign in even if your other second steps aren't available.\n\n\n\n\n\n\nYour U2F Key is now registered to your account as your default 2-Step Verification device! \n\n\nIf you accidentally lose a key, come here and remove that key from your account. No one could log in to your account, though, because they would still need to know your username and password.\n\n\nSigning in using your key\n\n\nNow you can sign in to your Google Account with the security key you add before.\n\n\n\n\n\n\nOn your computer, \nsign in to your Google Account\n. Your device will detect that your account has a security key.\n\n\n\n\n\n\nInsert your key into the USB port in your computer.\n\n\n\n\n\n\n\n\nWhen the BLUE LED begins to blink, press the button on the security key.\n\n\n\n\n\n\nCongratulations!\n You can use your key each time you sign in to your Google Account.\n\n\nUsing with more Services\n\n\nYou will find many more online services that support FIDO U2F, just have a try and enjoy the simplicity of U2F!\n\n\n\n\nUsing nRF52-U2F with Facebook\n\n\nUsing nRF52-U2F with Twitter\n\n\nUsing nRF52-U2F with GitHub\n\n\nUsing nRF52-U2F with GitLab\n\n\n\n\nCreate an Issue\n\n\nInterested in contributing to this project? Want to report a bug? Feel free to click here:\n\n\n Create an Issue", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/getting-started/#getting-started-with-nrf52-fido-u2f-key", 
+            "text": "This guide shows you how to get started with the nRF52 FIDO U2F Security Key. The following development boards are available to this nRF52-U2F implementation:      nRF52840-MDK  nRF52840 Micro Dev Kit USB Dongle        Get One!    Get One!     If you have already one of these two boards, congratulations, let's go ahead!   So how do you set it up to protect your online service accounts? Follow these easy instructions and you'll set up your nRF52 U2F Key with online services that support FIDO U2F protocol (e.g. Google Account).", 
+            "title": "Getting Started with nRF52 FIDO U2F Key"
+        }, 
+        {
+            "location": "/getting-started/#requirements", 
+            "text": "Latest version of Google Chrome browser (or at least version 38) or Opera browser    nRF52840-MDK  or  nRF52840 Micro Dev Kit USB Dongle  with the nRF52-U2F firmware    A Google Account (such as Gmail, Google Docs, YouTube, Google+)     Note  If no firmware available, please follow these guides to prepare the correct firmware:  Upgrading the firmware  or  Building the firmware .", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/getting-started/#setting-up-your-google-account", 
+            "text": "Turn on 2-Step Verification . If the 2-Step Verification is ON, continue with the next step.    Add the nRF52 U2F Security Key for 2-Step Verification . On  Security Key  option, click  ADD SECURITY KEY .     Prepare a nRF52 U2F Security Key. Insert your key into your USB port, and press the button on the key when the BLUE LED begins to blink.     Your security key is registered. Enter a name to complete this step.     Set up at least one backup option so that you can sign in even if your other second steps aren't available.    Your U2F Key is now registered to your account as your default 2-Step Verification device!   If you accidentally lose a key, come here and remove that key from your account. No one could log in to your account, though, because they would still need to know your username and password.", 
+            "title": "Setting Up Your Google Account"
+        }, 
+        {
+            "location": "/getting-started/#signing-in-using-your-key", 
+            "text": "Now you can sign in to your Google Account with the security key you add before.    On your computer,  sign in to your Google Account . Your device will detect that your account has a security key.    Insert your key into the USB port in your computer.     When the BLUE LED begins to blink, press the button on the security key.    Congratulations!  You can use your key each time you sign in to your Google Account.", 
+            "title": "Signing in using your key"
+        }, 
+        {
+            "location": "/getting-started/#using-with-more-services", 
+            "text": "You will find many more online services that support FIDO U2F, just have a try and enjoy the simplicity of U2F!   Using nRF52-U2F with Facebook  Using nRF52-U2F with Twitter  Using nRF52-U2F with GitHub  Using nRF52-U2F with GitLab", 
+            "title": "Using with more Services"
+        }, 
+        {
+            "location": "/getting-started/#create-an-issue", 
+            "text": "Interested in contributing to this project? Want to report a bug? Feel free to click here:   Create an Issue", 
+            "title": "Create an Issue"
+        }, 
+        {
+            "location": "/upgrading/", 
+            "text": "How to upgrade the nRF52-U2F Firmware?\n\n\nThis guide details how to upgrade the nRF52-U2F firmware and the open bootloader.\n\n\nThe nRF52 U2F Security Key contains an Open Bootloader with Device Firmware Update (DFU) functionality. You can easily upgrade the firmware using the following tools:\n\n\n\n\nnRF Connet for Desktop\n\n\nnrfutil\n from the command line.\n\n\n\n\nGet the latest pre-built firmware\n\n\nYou can get the latest pre-built firmware from the following table, where the \n.hex\n file is used with \nnRF Connet for Desktop\n and \n.zip\n package is used with \nnrfutil\n tool.\n\n\n\n\n\n\n\n\nBoard\n\n\nnRF52840-MDK\n\n\nnRF52840 Micro Dev Kit USB Dongle\n\n\n\n\n\n\n\n\n\n\nBootloader\n\n\nnrf52_u2f_bootloader_vx.x.x_mdk.hex\nnrf52_u2f_bootloader_vx.x.x_mdk.zip\n\n\nnrf52_u2f_bootloader_vx.x.x_mdk_dongle.zip\n\n\n\n\n\n\nApplication\n\n\nnrf52_u2f_app_vx.x.x_mdk.hex\nnrf52_u2f_app_vx.x.x_mdk.zip\n\n\nnrf52_u2f_app_vx.x.x_mdk_dongle.hex\nnrf52_u2f_app_vx.x.x_mdk_dongle.zip\n\n\n\n\n\n\n\n\nUpgrade U2F Firmware with nRF Connet for Desktop\n\n\nTo update the device, it must be in bootloader mode.\n\n\nWhile holding the dongle's RESET/USR button, connect it to your computer. When the device has entered the bootloader mode, the RGB LED pulses RED. The device is now ready for programming.\n\n\nLaunch \nProgrammer\n app from nRF Connect for Desktop, you can find the device and select it to start programming.\n\n\n\n\nAdd an application file \nnrf52_u2f_app_vx.x.x_mdk.hex\n(for nRF52840-MDK) or \nnrf52_u2f_app_vx.x.x_mdk_dongle.hex\n(for nRF52840 Micro Dev Kit USB Dongle), you will see the memory layout of the HEX file, and then write it into the device.\n\n\n\n\nAfter programming, please physically re-plug the device. The new firmware should work as expected.\n\n\nUpgrade U2F Firmware with nrfutil\n\n\nnrfutil\n is a Python package and command-line utility that supports Device Firmware Updates (DFU) and cryptographic functionality.\n\n\nTo install the latest published version from the Python Package Index simply type:\n\n\npip install nrfutil\n\n\n\n\nTo update the device, it must be in bootloader mode.\n\n\nWhile holding the dongle's RESET/USR button, connect it to your computer. When the device has entered the bootloader mode, the RGB LED pulses RED. The device is now ready for programming.\n\n\nRun the following command to upgrade the U2F firmware, where:\n\n\n\n\n\n\npackage-path\n is the filename of the DFU package (e.g. \nnrf52_u2f_app_v1.0.0_mdk_dongle.zip\n).\n\n\n\n\n\n\nserial-port\n is the serial port address to which the device is connected. (e.g. \nCOM1\n in windows systems, \n/dev/ttyACM0\n in linux/mac).\n\n\n\n\n\n\nnrfutil dfu usb_serial -pkg \npackage-path\n -p \nserial-port\n\n\n\n\n\n\n\nUpgrade Open Bootloader with nrfutil\n\n\nTo update the bootloader, the device must be in bootloader mode.\n\n\nWhile holding the dongle's RESET/USR button, connect it to your computer. When the device has entered the bootloader mode, the RGB LED pulses RED. The device is now ready for programming.\n\n\nRun the following command to upgrade the bootloader, where:\n\n\n\n\n\n\nbootloader-path\n is the filename of the Bootloader package (e.g. \nnrf52_u2f_bootloader_v1.0.0_mdk_dongle.zip\n).\n\n\n\n\n\n\nserial-port\n is the serial port address to which the device is connected. (e.g. \nCOM1\n in windows systems, \n/dev/ttyACM0\n in linux/mac).\n\n\n\n\n\n\nnrfutil dfu usb_serial -pkg \nbootloader-path\n -p \nserial-port\n\n\n\n\n\n\n\nCreate an Issue\n\n\nInterested in contributing to this project? Want to report a bug? Feel free to click here:\n\n\n Create an Issue", 
+            "title": "Upgrading Firmware"
+        }, 
+        {
+            "location": "/upgrading/#how-to-upgrade-the-nrf52-u2f-firmware", 
+            "text": "This guide details how to upgrade the nRF52-U2F firmware and the open bootloader.  The nRF52 U2F Security Key contains an Open Bootloader with Device Firmware Update (DFU) functionality. You can easily upgrade the firmware using the following tools:   nRF Connet for Desktop  nrfutil  from the command line.", 
+            "title": "How to upgrade the nRF52-U2F Firmware?"
+        }, 
+        {
+            "location": "/upgrading/#get-the-latest-pre-built-firmware", 
+            "text": "You can get the latest pre-built firmware from the following table, where the  .hex  file is used with  nRF Connet for Desktop  and  .zip  package is used with  nrfutil  tool.     Board  nRF52840-MDK  nRF52840 Micro Dev Kit USB Dongle      Bootloader  nrf52_u2f_bootloader_vx.x.x_mdk.hex nrf52_u2f_bootloader_vx.x.x_mdk.zip  nrf52_u2f_bootloader_vx.x.x_mdk_dongle.zip    Application  nrf52_u2f_app_vx.x.x_mdk.hex nrf52_u2f_app_vx.x.x_mdk.zip  nrf52_u2f_app_vx.x.x_mdk_dongle.hex nrf52_u2f_app_vx.x.x_mdk_dongle.zip", 
+            "title": "Get the latest pre-built firmware"
+        }, 
+        {
+            "location": "/upgrading/#upgrade-u2f-firmware-with-nrf-connet-for-desktop", 
+            "text": "To update the device, it must be in bootloader mode.  While holding the dongle's RESET/USR button, connect it to your computer. When the device has entered the bootloader mode, the RGB LED pulses RED. The device is now ready for programming.  Launch  Programmer  app from nRF Connect for Desktop, you can find the device and select it to start programming.   Add an application file  nrf52_u2f_app_vx.x.x_mdk.hex (for nRF52840-MDK) or  nrf52_u2f_app_vx.x.x_mdk_dongle.hex (for nRF52840 Micro Dev Kit USB Dongle), you will see the memory layout of the HEX file, and then write it into the device.   After programming, please physically re-plug the device. The new firmware should work as expected.", 
+            "title": "Upgrade U2F Firmware with nRF Connet for Desktop"
+        }, 
+        {
+            "location": "/upgrading/#upgrade-u2f-firmware-with-nrfutil", 
+            "text": "nrfutil  is a Python package and command-line utility that supports Device Firmware Updates (DFU) and cryptographic functionality.  To install the latest published version from the Python Package Index simply type:  pip install nrfutil  To update the device, it must be in bootloader mode.  While holding the dongle's RESET/USR button, connect it to your computer. When the device has entered the bootloader mode, the RGB LED pulses RED. The device is now ready for programming.  Run the following command to upgrade the U2F firmware, where:    package-path  is the filename of the DFU package (e.g.  nrf52_u2f_app_v1.0.0_mdk_dongle.zip ).    serial-port  is the serial port address to which the device is connected. (e.g.  COM1  in windows systems,  /dev/ttyACM0  in linux/mac).    nrfutil dfu usb_serial -pkg  package-path  -p  serial-port", 
+            "title": "Upgrade U2F Firmware with nrfutil"
+        }, 
+        {
+            "location": "/upgrading/#upgrade-open-bootloader-with-nrfutil", 
+            "text": "To update the bootloader, the device must be in bootloader mode.  While holding the dongle's RESET/USR button, connect it to your computer. When the device has entered the bootloader mode, the RGB LED pulses RED. The device is now ready for programming.  Run the following command to upgrade the bootloader, where:    bootloader-path  is the filename of the Bootloader package (e.g.  nrf52_u2f_bootloader_v1.0.0_mdk_dongle.zip ).    serial-port  is the serial port address to which the device is connected. (e.g.  COM1  in windows systems,  /dev/ttyACM0  in linux/mac).    nrfutil dfu usb_serial -pkg  bootloader-path  -p  serial-port", 
+            "title": "Upgrade Open Bootloader with nrfutil"
+        }, 
+        {
+            "location": "/upgrading/#create-an-issue", 
+            "text": "Interested in contributing to this project? Want to report a bug? Feel free to click here:   Create an Issue", 
+            "title": "Create an Issue"
+        }, 
+        {
+            "location": "/building/", 
+            "text": "How to build the nRF52-U2F Firmware?\n\n\nThis section describes how to build a new nRF52-U2F firmware and bootloader for your security key.\n\n\nInstall Dependencies\n\n\nTo build the nRF52-U2F, you need to install some additional dependencies.\n\n\nOn Windows, the easiest way to install dependencies is to use the \nMSYS2\n. You can do so by performing the following steps:\n\n\n\n\n\n\nDownload\n and run the installer - \"x86_64\" for 64-bit, \"i686\" for 32-bit Windows.\n\n\n\n\n\n\nRun MSYS2 from Start menu and install dependencies with:\n\n\n# Update the package database and core system packages\n\n$ pacman -Syu\n\n\n# Install dependencies\n\n$ pacman -S git make python2 openssl\n\n\n\n\n\n\n\n\nLinux and macOS already have some necessary shell commands, run the following command to install the rest:\n\n\n# On macOS\n\n$ brew install openssl\n\n\n# On Ubuntu\n\n$ sudo apt-get install build-essential checkinstall openssl\n\n\n\n\nClone the nRF52-U2F Repository\n\n\nTo clone the nRF52-U2F source code repository from GitHub:\n\n\ngit clone --recursive https://github.com/makerdiary/nrf52-u2f\n\n\n\n\nDownload the nRF5 SDK\n\n\nDownload the SDK package from \ndeveloper.nordicsemi.com\n.\n\n\nThe current version we are using is \n15.2.0\n, it can be downloaded directly here: \nnRF5_SDK_v15.2.0_9412b96.zip\n\n\nExtract the zip file into the \nnrf52-u2f/nrf_sdks/\n directory. This should give you the following folder structure:\n\n\n./nrf52-u2f/\n\u251c\u2500\u2500 LICENSE.md\n\u251c\u2500\u2500 README.md\n\u251c\u2500\u2500 boards\n\u251c\u2500\u2500 certs\n\u251c\u2500\u2500 docs\n\u251c\u2500\u2500 external\n\u251c\u2500\u2500 firmware\n\u251c\u2500\u2500 include\n\u251c\u2500\u2500 material\n\u251c\u2500\u2500 mkdocs.yml\n\u251c\u2500\u2500 nrf_sdks\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 README.md\n\u2502\u00a0\u00a0 \u2514\u2500\u2500 nRF5_SDK_15.2.0_9412b96\n\u251c\u2500\u2500 open_bootloader\n\u251c\u2500\u2500 source\n\u2514\u2500\u2500 tools\n\n\n\n\nInstall GNU Arm Embedded Toolchain\n\n\nDownload and install a \nGNU ARM Embedded\n build for your operating system and extract it on your file system.\n\n\n\n\nNote\n\n\nThe current version we are using is \n6-2017-q2-update\n.\n\n\n\n\nConfig the toolchain path in \nmakefile.windows\n or \nmakefile.posix\n depending on platform you are using. That is, the \n.posix\n should be edited if your are working on either Linux or macOS. These files are located in:\n\n\nnRF5 SDK\n/components/toolchain/gcc\n\n\n\n\nOpen the file in a text editor and make sure that the \nGNU_INSTALL_ROOT\n variable is pointing to your GNU Arm Embedded Toolchain install directory. For example:\n\n\nGNU_INSTALL_ROOT :\n=\n \n$(\nHOME\n)\n/gcc-arm-none-eabi/gcc-arm-none-eabi-6-2017-q2-update/bin/\nGNU_VERSION :\n=\n \n6\n.3.1\nGNU_PREFIX :\n=\n arm-none-eabi\n\n\n\n\nGenerate Attestation Key and Certificate\n\n\nFor more security, remember to generate a new attestation key and certificate.\n\n\nChange to the \ntools\n directory, run the \ngenerate-certs.sh\n to generate a new attestation key and certificate:\n\n\n$ \ncd\n ./nrf52-u2f/tools\n\n$ ./generate-certs.sh\n\n\n\n\nIf successfully completed, the private key and certificate are stored in \ncerts/keys.c\n file.\n\n\nBuild the U2F Firmware\n\n\nNow you are ready to build nRF52-U2F source code.\n\n\nOpen terminal and change directory to:\n\n\n# For nRF52840-MDK board\n\n$ \ncd\n ./nrf52-u2f/boards/nrf52840-mdk/armgcc\n$ make clean \n make\n\n\n# For nRF52840 Micro Dev Kit USB Dongle\n\n$ \ncd\n ./nrf52-u2f/boards/nrf52840-mdk-usb-dongle/armgcc\n$ make clean \n make\n\n\n\n\nThe firmware is in the \narmgcc/_build/\n directory with the name \nnrf52840_xxaa.hex\n.\n\n\n\n\n\n\nNote\n\n\nPlease follow the \nUpgrading Firmware\n guide to flash the new firmware!\n\n\n\n\nBuild the Open Bootloader\n\n\nThe nRF52-U2F contains a reliable open bootloader, which means that you can update the nRF52-U2F firmware from USB directly without an external programmer needed. \n\n\nYou can build a new bootloader by performing the following steps:\n\n\nOpen terminal and change directory to:\n\n\n# For nRF52840-MDK board\n\n$ \ncd\n ./nrf52-u2f/open_bootloader/nrf52840-mdk/armgcc\n$ make clean \n make\n$ make mergehex\n\n\n# For nRF52840 Micro Dev Kit USB Dongle\n\n$ \ncd\n ./nrf52-u2f/open_bootloader/nrf52840-mdk-usb-dongle/armgcc\n$ make clean \n make\n$ make mergehex\n\n\n\n\nThe bootloader is in the \narmgcc/_build/\n directory with the name \nnrf52840_xxaa_mbr.hex\n.\n\n\n\n\nNote\n\n\nPlease follow the \nUpgrading Firmware\n guide to flash the new bootloader!\n\n\n\n\nCreate an Issue\n\n\nInterested in contributing to this project? Want to report a bug? Feel free to click here:\n\n\n Create an Issue", 
+            "title": "Building the Firmware"
+        }, 
+        {
+            "location": "/building/#how-to-build-the-nrf52-u2f-firmware", 
+            "text": "This section describes how to build a new nRF52-U2F firmware and bootloader for your security key.", 
+            "title": "How to build the nRF52-U2F Firmware?"
+        }, 
+        {
+            "location": "/building/#install-dependencies", 
+            "text": "To build the nRF52-U2F, you need to install some additional dependencies.  On Windows, the easiest way to install dependencies is to use the  MSYS2 . You can do so by performing the following steps:    Download  and run the installer - \"x86_64\" for 64-bit, \"i686\" for 32-bit Windows.    Run MSYS2 from Start menu and install dependencies with:  # Update the package database and core system packages \n$ pacman -Syu # Install dependencies \n$ pacman -S git make python2 openssl    Linux and macOS already have some necessary shell commands, run the following command to install the rest:  # On macOS \n$ brew install openssl # On Ubuntu \n$ sudo apt-get install build-essential checkinstall openssl", 
+            "title": "Install Dependencies"
+        }, 
+        {
+            "location": "/building/#clone-the-nrf52-u2f-repository", 
+            "text": "To clone the nRF52-U2F source code repository from GitHub:  git clone --recursive https://github.com/makerdiary/nrf52-u2f", 
+            "title": "Clone the nRF52-U2F Repository"
+        }, 
+        {
+            "location": "/building/#download-the-nrf5-sdk", 
+            "text": "Download the SDK package from  developer.nordicsemi.com .  The current version we are using is  15.2.0 , it can be downloaded directly here:  nRF5_SDK_v15.2.0_9412b96.zip  Extract the zip file into the  nrf52-u2f/nrf_sdks/  directory. This should give you the following folder structure:  ./nrf52-u2f/\n\u251c\u2500\u2500 LICENSE.md\n\u251c\u2500\u2500 README.md\n\u251c\u2500\u2500 boards\n\u251c\u2500\u2500 certs\n\u251c\u2500\u2500 docs\n\u251c\u2500\u2500 external\n\u251c\u2500\u2500 firmware\n\u251c\u2500\u2500 include\n\u251c\u2500\u2500 material\n\u251c\u2500\u2500 mkdocs.yml\n\u251c\u2500\u2500 nrf_sdks\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 README.md\n\u2502\u00a0\u00a0 \u2514\u2500\u2500 nRF5_SDK_15.2.0_9412b96\n\u251c\u2500\u2500 open_bootloader\n\u251c\u2500\u2500 source\n\u2514\u2500\u2500 tools", 
+            "title": "Download the nRF5 SDK"
+        }, 
+        {
+            "location": "/building/#install-gnu-arm-embedded-toolchain", 
+            "text": "Download and install a  GNU ARM Embedded  build for your operating system and extract it on your file system.   Note  The current version we are using is  6-2017-q2-update .   Config the toolchain path in  makefile.windows  or  makefile.posix  depending on platform you are using. That is, the  .posix  should be edited if your are working on either Linux or macOS. These files are located in:  nRF5 SDK /components/toolchain/gcc  Open the file in a text editor and make sure that the  GNU_INSTALL_ROOT  variable is pointing to your GNU Arm Embedded Toolchain install directory. For example:  GNU_INSTALL_ROOT : =   $( HOME ) /gcc-arm-none-eabi/gcc-arm-none-eabi-6-2017-q2-update/bin/\nGNU_VERSION : =   6 .3.1\nGNU_PREFIX : =  arm-none-eabi", 
+            "title": "Install GNU Arm Embedded Toolchain"
+        }, 
+        {
+            "location": "/building/#generate-attestation-key-and-certificate", 
+            "text": "For more security, remember to generate a new attestation key and certificate.  Change to the  tools  directory, run the  generate-certs.sh  to generate a new attestation key and certificate:  $  cd  ./nrf52-u2f/tools\n\n$ ./generate-certs.sh  If successfully completed, the private key and certificate are stored in  certs/keys.c  file.", 
+            "title": "Generate Attestation Key and Certificate"
+        }, 
+        {
+            "location": "/building/#build-the-u2f-firmware", 
+            "text": "Now you are ready to build nRF52-U2F source code.  Open terminal and change directory to:  # For nRF52840-MDK board \n$  cd  ./nrf52-u2f/boards/nrf52840-mdk/armgcc\n$ make clean   make # For nRF52840 Micro Dev Kit USB Dongle \n$  cd  ./nrf52-u2f/boards/nrf52840-mdk-usb-dongle/armgcc\n$ make clean   make  The firmware is in the  armgcc/_build/  directory with the name  nrf52840_xxaa.hex .    Note  Please follow the  Upgrading Firmware  guide to flash the new firmware!", 
+            "title": "Build the U2F Firmware"
+        }, 
+        {
+            "location": "/building/#build-the-open-bootloader", 
+            "text": "The nRF52-U2F contains a reliable open bootloader, which means that you can update the nRF52-U2F firmware from USB directly without an external programmer needed.   You can build a new bootloader by performing the following steps:  Open terminal and change directory to:  # For nRF52840-MDK board \n$  cd  ./nrf52-u2f/open_bootloader/nrf52840-mdk/armgcc\n$ make clean   make\n$ make mergehex # For nRF52840 Micro Dev Kit USB Dongle \n$  cd  ./nrf52-u2f/open_bootloader/nrf52840-mdk-usb-dongle/armgcc\n$ make clean   make\n$ make mergehex  The bootloader is in the  armgcc/_build/  directory with the name  nrf52840_xxaa_mbr.hex .   Note  Please follow the  Upgrading Firmware  guide to flash the new bootloader!", 
+            "title": "Build the Open Bootloader"
+        }, 
+        {
+            "location": "/building/#create-an-issue", 
+            "text": "Interested in contributing to this project? Want to report a bug? Feel free to click here:   Create an Issue", 
+            "title": "Create an Issue"
+        }, 
+        {
+            "location": "/CONTRIBUTING/", 
+            "text": "Interested in contributing to this project? Want to report a bug? Before you do, please read the following guidelines.\n\n\nGot a question or found a bug?\n\n\nIf you got a question or found a bug in this project, you can help us by submitting an issue to the \nissue tracker\n in our GitHub repository. Even better, you can submit a Pull Request with a fix.\n\n\nMissing a feature?\n\n\nYou can request a new feature by submitting an issue to our GitHub Repository. Be sure that it is of use for everyone.\n\n\n Create an Issue", 
+            "title": "Contributing"
+        }, 
+        {
+            "location": "/CONTRIBUTING/#got-a-question-or-found-a-bug", 
+            "text": "If you got a question or found a bug in this project, you can help us by submitting an issue to the  issue tracker  in our GitHub repository. Even better, you can submit a Pull Request with a fix.", 
+            "title": "Got a question or found a bug?"
+        }, 
+        {
+            "location": "/CONTRIBUTING/#missing-a-feature", 
+            "text": "You can request a new feature by submitting an issue to our GitHub Repository. Be sure that it is of use for everyone.   Create an Issue", 
+            "title": "Missing a feature?"
+        }, 
+        {
+            "location": "/LICENSE/", 
+            "text": "MIT License\n\n\nCopyright \n 2018 \nmakerdiary\n\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.", 
+            "title": "License"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-google/", 
+            "text": "Using nRF52 U2F Security Key with Google\n\n\nThis guide describes how to use the nRF52 U2F Security Key with your Google Account.\n\n\nRequirements\n\n\n\n\n\n\nLatest version of Google Chrome browser (or at least version 38) or Opera browser\n\n\n\n\n\n\nnRF52840-MDK\n or \nnRF52840 Micro Dev Kit USB Dongle\n with the nRF52-U2F firmware\n\n\n\n\n\n\nA Google Account (such as Gmail, Google Docs, YouTube, Google+)\n\n\n\n\n\n\n\n\nNote\n\n\nIf no firmware available, please follow these guides to prepare the correct firmware: \nUpgrading the firmware\n or \nBuilding the firmware\n.\n\n\n\n\nSetting Up Your Google Account\n\n\n\n\n\n\nTurn on 2-Step Verification\n. If the 2-Step Verification is ON, continue with the next step.\n\n\n\n\n\n\nAdd the nRF52 U2F Security Key for 2-Step Verification\n. On \nSecurity Key\n option, click \nADD SECURITY KEY\n.\n\n\n\n\n\n\n\n\nPrepare a nRF52 U2F Security Key. Insert your key into your USB port, and press the button on the key when the BLUE LED begins to blink.\n\n\n\n\n\n\n\n\nYour security key is registered. Enter a name to complete this step.\n\n\n\n\n\n\n\n\nSet up at least one backup option so that you can sign in even if your other second steps aren't available.\n\n\n\n\n\n\nYour U2F Key is now registered to your account as your default 2-Step Verification device! \n\n\nIf you accidentally lose a key, come here and remove that key from your account. No one could log in to your account, though, because they would still need to know your username and password.\n\n\nSigning in using your key\n\n\nNow you can sign in to your Google Account with the security key you add before.\n\n\n\n\n\n\nOn your computer, \nsign in to your Google Account\n. Your device will detect that your account has a security key.\n\n\n\n\n\n\nInsert your key into the USB port in your computer.\n\n\n\n\n\n\n\n\nWhen the BLUE LED begins to blink, press the button on the key.\n\n\n\n\n\n\nCongratulations!\n You can use your key each time you sign in to your Google Account.\n\n\nCreate an Issue\n\n\nInterested in contributing to this project? Want to report a bug? Feel free to click here:\n\n\n Create an Issue", 
+            "title": "Using nRF52-U2F with Google"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-google/#using-nrf52-u2f-security-key-with-google", 
+            "text": "This guide describes how to use the nRF52 U2F Security Key with your Google Account.", 
+            "title": "Using nRF52 U2F Security Key with Google"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-google/#requirements", 
+            "text": "Latest version of Google Chrome browser (or at least version 38) or Opera browser    nRF52840-MDK  or  nRF52840 Micro Dev Kit USB Dongle  with the nRF52-U2F firmware    A Google Account (such as Gmail, Google Docs, YouTube, Google+)     Note  If no firmware available, please follow these guides to prepare the correct firmware:  Upgrading the firmware  or  Building the firmware .", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-google/#setting-up-your-google-account", 
+            "text": "Turn on 2-Step Verification . If the 2-Step Verification is ON, continue with the next step.    Add the nRF52 U2F Security Key for 2-Step Verification . On  Security Key  option, click  ADD SECURITY KEY .     Prepare a nRF52 U2F Security Key. Insert your key into your USB port, and press the button on the key when the BLUE LED begins to blink.     Your security key is registered. Enter a name to complete this step.     Set up at least one backup option so that you can sign in even if your other second steps aren't available.    Your U2F Key is now registered to your account as your default 2-Step Verification device!   If you accidentally lose a key, come here and remove that key from your account. No one could log in to your account, though, because they would still need to know your username and password.", 
+            "title": "Setting Up Your Google Account"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-google/#signing-in-using-your-key", 
+            "text": "Now you can sign in to your Google Account with the security key you add before.    On your computer,  sign in to your Google Account . Your device will detect that your account has a security key.    Insert your key into the USB port in your computer.     When the BLUE LED begins to blink, press the button on the key.    Congratulations!  You can use your key each time you sign in to your Google Account.", 
+            "title": "Signing in using your key"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-google/#create-an-issue", 
+            "text": "Interested in contributing to this project? Want to report a bug? Feel free to click here:   Create an Issue", 
+            "title": "Create an Issue"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-facebook/", 
+            "text": "Using nRF52 U2F Security Key with Facebook\n\n\nThis guide describes how to use the nRF52 U2F Security Key with Facebook.\n\n\nRequirements\n\n\n\n\n\n\nLatest version of Google Chrome browser (or at least version 38) or Opera browser\n\n\n\n\n\n\nnRF52840-MDK\n or \nnRF52840 Micro Dev Kit USB Dongle\n with the nRF52-U2F firmware\n\n\n\n\n\n\nA Facebook Account\n\n\n\n\n\n\n\n\nNote\n\n\nIf no firmware available, please follow these guides to prepare the correct firmware: \nUpgrading the firmware\n or \nBuilding the firmware\n.\n\n\n\n\nSetting Up Your Facebook Account\n\n\n\n\n\n\nIn Google Chrome or Opera, log in to \nFacebook\n.\n\n\n\n\n\n\nClick the arrow at the top right, and then click \nSettings\n.\n\n\n\n\n\n\nIn the Security Settings page, in the left pane, click \nSecurity and Login\n.\n\n\n\n\n\n\nNext to \nUse two-factor authentication\n, click \nEdit\n.\n\n\n\n\n\n\nClick \nGet Started\n button to add extra security with Two-Factor Authentication.\n\n\n\n\n\n\n\n\nSelect \nAuthentication App\n option, and set up an app like Google Authenticator or Duo Mobile to generate login codes.\n\n\n\n\n\n\nFollow the instructions on the screen to finish turning on Two-Factor Authentication.\n\n\n\n\n\n\n\n\nNext, you are going to add your U2F Key. Under \nAdd a Backup\n, to the right of \nSecurity Keys\n, click \nSetup\n.\n\n\n\n\n\n\n\n\n\n\nWhen the BLUE LED begins to blink, press the button on the key.\n\n\n\n\n\n\n\n\nSigning in using your key\n\n\nNow you can sign in to your Facebook account with the security key you add before.\n\n\n\n\n\n\nOn your computer, \nsign in to Facebook\n. \n\n\n\n\n\n\nInsert your security key into the USB port.\n\n\n\n\n\n\n\n\nWhen the BLUE LED begins to blink, press the button on the key.\n\n\n\n\n\n\n\n\nCongratulations!\n You can use your key each time you sign in to your Facebook account.\n\n\nCreate an Issue\n\n\nInterested in contributing to this project? Want to report a bug? Feel free to click here:\n\n\n Create an Issue", 
+            "title": "Using nRF52-U2F with Facebook"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-facebook/#using-nrf52-u2f-security-key-with-facebook", 
+            "text": "This guide describes how to use the nRF52 U2F Security Key with Facebook.", 
+            "title": "Using nRF52 U2F Security Key with Facebook"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-facebook/#requirements", 
+            "text": "Latest version of Google Chrome browser (or at least version 38) or Opera browser    nRF52840-MDK  or  nRF52840 Micro Dev Kit USB Dongle  with the nRF52-U2F firmware    A Facebook Account     Note  If no firmware available, please follow these guides to prepare the correct firmware:  Upgrading the firmware  or  Building the firmware .", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-facebook/#setting-up-your-facebook-account", 
+            "text": "In Google Chrome or Opera, log in to  Facebook .    Click the arrow at the top right, and then click  Settings .    In the Security Settings page, in the left pane, click  Security and Login .    Next to  Use two-factor authentication , click  Edit .    Click  Get Started  button to add extra security with Two-Factor Authentication.     Select  Authentication App  option, and set up an app like Google Authenticator or Duo Mobile to generate login codes.    Follow the instructions on the screen to finish turning on Two-Factor Authentication.     Next, you are going to add your U2F Key. Under  Add a Backup , to the right of  Security Keys , click  Setup .      When the BLUE LED begins to blink, press the button on the key.", 
+            "title": "Setting Up Your Facebook Account"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-facebook/#signing-in-using-your-key", 
+            "text": "Now you can sign in to your Facebook account with the security key you add before.    On your computer,  sign in to Facebook .     Insert your security key into the USB port.     When the BLUE LED begins to blink, press the button on the key.     Congratulations!  You can use your key each time you sign in to your Facebook account.", 
+            "title": "Signing in using your key"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-facebook/#create-an-issue", 
+            "text": "Interested in contributing to this project? Want to report a bug? Feel free to click here:   Create an Issue", 
+            "title": "Create an Issue"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-twitter/", 
+            "text": "Using nRF52 U2F Security Key with Twitter\n\n\nThis guide describes how to use the nRF52 U2F Security Key with Twitter.\n\n\nRequirements\n\n\n\n\n\n\nLatest version of Google Chrome browser (or at least version 38) or Opera browser\n\n\n\n\n\n\nnRF52840-MDK\n or \nnRF52840 Micro Dev Kit USB Dongle\n with the nRF52-U2F firmware\n\n\n\n\n\n\nA Twitter Account\n\n\n\n\n\n\n\n\nNote\n\n\nIf no firmware available, please follow these guides to prepare the correct firmware: \nUpgrading the firmware\n or \nBuilding the firmware\n.\n\n\n\n\nSetting Up Your Twitter Account\n\n\n\n\n\n\nIn Google Chrome or Opera, log in to \nTwitter\n.\n\n\n\n\n\n\nClick the profile photo at the top right, and then click \nSettings and privacy\n.\n\n\n\n\n\n\nIn the \nAccount\n page, click \nReview your login verification methods\n button.\n\n\n\n\n\n\nNext to \nSecurity key\n, click \nSet up\n.\n\n\n\n\n\n\nIn the \nSecurity key\n window, and click \nStart\n\n\n\n\n\n\n\n\nInsert your key into your USB port, and then press the button on your key.\n\n\n\n\n\n\n\n\nNow that you\u2019ve added your key to this account, let\u2019s complete the verification \u2014 press the button on your key one more time.\n\n\n\n\n\n\n\n\nNow you can use this security key anytime you log in from a compatible browser.\n\n\n\n\n\n\n\n\nSet up at least one backup option so that you can sign in even if your other verification methods aren't available.\n\n\n\n\n\n\nSigning in using your key\n\n\nNow you can sign in to your Twitter account with the security key you add before.\n\n\n\n\n\n\nOn your computer, \nsign in to Twitter\n. \n\n\n\n\n\n\nInsert your security key into the USB port.\n\n\n\n\n\n\n\n\nWhen the BLUE LED begins to blink, press the button on the key.\n\n\n\n\n\n\nCongratulations!\n You can use your key each time you sign in to your Twitter account.\n\n\nCreate an Issue\n\n\nInterested in contributing to this project? Want to report a bug? Feel free to click here:\n\n\n Create an Issue", 
+            "title": "Using nRF52-U2F with Twitter"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-twitter/#using-nrf52-u2f-security-key-with-twitter", 
+            "text": "This guide describes how to use the nRF52 U2F Security Key with Twitter.", 
+            "title": "Using nRF52 U2F Security Key with Twitter"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-twitter/#requirements", 
+            "text": "Latest version of Google Chrome browser (or at least version 38) or Opera browser    nRF52840-MDK  or  nRF52840 Micro Dev Kit USB Dongle  with the nRF52-U2F firmware    A Twitter Account     Note  If no firmware available, please follow these guides to prepare the correct firmware:  Upgrading the firmware  or  Building the firmware .", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-twitter/#setting-up-your-twitter-account", 
+            "text": "In Google Chrome or Opera, log in to  Twitter .    Click the profile photo at the top right, and then click  Settings and privacy .    In the  Account  page, click  Review your login verification methods  button.    Next to  Security key , click  Set up .    In the  Security key  window, and click  Start     Insert your key into your USB port, and then press the button on your key.     Now that you\u2019ve added your key to this account, let\u2019s complete the verification \u2014 press the button on your key one more time.     Now you can use this security key anytime you log in from a compatible browser.     Set up at least one backup option so that you can sign in even if your other verification methods aren't available.", 
+            "title": "Setting Up Your Twitter Account"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-twitter/#signing-in-using-your-key", 
+            "text": "Now you can sign in to your Twitter account with the security key you add before.    On your computer,  sign in to Twitter .     Insert your security key into the USB port.     When the BLUE LED begins to blink, press the button on the key.    Congratulations!  You can use your key each time you sign in to your Twitter account.", 
+            "title": "Signing in using your key"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-twitter/#create-an-issue", 
+            "text": "Interested in contributing to this project? Want to report a bug? Feel free to click here:   Create an Issue", 
+            "title": "Create an Issue"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-github/", 
+            "text": "Using nRF52 U2F Security Key with GitHub\n\n\nThis guide describes how to use the nRF52 U2F Security Key with GitHub.\n\n\nRequirements\n\n\n\n\n\n\nLatest version of Google Chrome browser (or at least version 38) or Opera browser\n\n\n\n\n\n\nnRF52840-MDK\n or \nnRF52840 Micro Dev Kit USB Dongle\n with the nRF52-U2F firmware\n\n\n\n\n\n\nA GitHub Account\n\n\n\n\n\n\n\n\nNote\n\n\nIf no firmware available, please follow these guides to prepare the correct firmware: \nUpgrading the firmware\n or \nBuilding the firmware\n.\n\n\n\n\nConfiguring two-factor authentication using FIDO U2F\n\n\n\n\n\n\nYou must have already configured 2FA via a TOTP mobile app or via SMS.\n\n\n\n\n\n\nDownload and install \nGoogle Authenticator\n.\n\n\n\n\n\n\nEnsure that you have the nRF52 U2F Security Key inserted into your computer.\n\n\n\n\n\n\nIn the upper-right corner of any page, click your profile photo, then click \nSettings\n.\n\n\n\n\n\n\nIn the user settings sidebar, click \nSecurity\n.\n\n\n\n\n\n\nNext to \"Security keys\", click \nAdd\n.\n\n\n\n\n\n\nUnder \"Security keys\", click \nRegister new device\n.\n\n\n\n\n\n\nType a nickname for the security key, then click \nAdd\n.\n\n\n\n\n\n\nWhen the BLUE LED begins to blink, press the button on the key to have it authenticate against GitHub.\n\n\n\n\n\n\n\n\nSigning in using your key\n\n\nNow you can sign in to your GitHub account with the security key you add before.\n\n\n\n\n\n\nOn your computer, \nsign in to GitHub\n. Your device will detect that your account has a security key.\n\n\n\n\n\n\nInsert your security key into the USB port.\n\n\n\n\n\n\nWhen the BLUE LED begins to blink, press the button on the key.\n\n\n\n\n\n\n\n\nCongratulations!\n You can use your key each time you sign in to your GitHub account.\n\n\nCreate an Issue\n\n\nInterested in contributing to this project? Want to report a bug? Feel free to click here:\n\n\n Create an Issue", 
+            "title": "Using nRF52-U2F with GitHub"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-github/#using-nrf52-u2f-security-key-with-github", 
+            "text": "This guide describes how to use the nRF52 U2F Security Key with GitHub.", 
+            "title": "Using nRF52 U2F Security Key with GitHub"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-github/#requirements", 
+            "text": "Latest version of Google Chrome browser (or at least version 38) or Opera browser    nRF52840-MDK  or  nRF52840 Micro Dev Kit USB Dongle  with the nRF52-U2F firmware    A GitHub Account     Note  If no firmware available, please follow these guides to prepare the correct firmware:  Upgrading the firmware  or  Building the firmware .", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-github/#configuring-two-factor-authentication-using-fido-u2f", 
+            "text": "You must have already configured 2FA via a TOTP mobile app or via SMS.    Download and install  Google Authenticator .    Ensure that you have the nRF52 U2F Security Key inserted into your computer.    In the upper-right corner of any page, click your profile photo, then click  Settings .    In the user settings sidebar, click  Security .    Next to \"Security keys\", click  Add .    Under \"Security keys\", click  Register new device .    Type a nickname for the security key, then click  Add .    When the BLUE LED begins to blink, press the button on the key to have it authenticate against GitHub.", 
+            "title": "Configuring two-factor authentication using FIDO U2F"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-github/#signing-in-using-your-key", 
+            "text": "Now you can sign in to your GitHub account with the security key you add before.    On your computer,  sign in to GitHub . Your device will detect that your account has a security key.    Insert your security key into the USB port.    When the BLUE LED begins to blink, press the button on the key.     Congratulations!  You can use your key each time you sign in to your GitHub account.", 
+            "title": "Signing in using your key"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-github/#create-an-issue", 
+            "text": "Interested in contributing to this project? Want to report a bug? Feel free to click here:   Create an Issue", 
+            "title": "Create an Issue"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-gitlab/", 
+            "text": "Using nRF52 U2F Security Key with GitLab\n\n\nThis guide describes how to use the nRF52 U2F Security Key with GitLab.\n\n\nRequirements\n\n\n\n\n\n\nLatest version of Google Chrome browser (or at least version 38) or Opera browser\n\n\n\n\n\n\nnRF52840-MDK\n or \nnRF52840 Micro Dev Kit USB Dongle\n with the nRF52-U2F firmware\n\n\n\n\n\n\nA GitLab Account\n\n\n\n\n\n\n\n\nNote\n\n\nIf no firmware available, please follow these guides to prepare the correct firmware: \nUpgrading the firmware\n or \nBuilding the firmware\n.\n\n\n\n\nSetting Up Your GitLab Account\n\n\n\n\n\n\nIn Google Chrome or Opera, log in to \nGitLab\n.\n\n\n\n\n\n\nClick the profile photo at the top right, and then click \nSettings\n.\n\n\n\n\n\n\nIn the \nAccount\n page, click \nEnable two-factor authentication\n button.\n\n\n\n\n\n\nDownload the Google Authenticator application from App Store or Google Play Store and scan the QR code.\n\n\n\n\n\n\nEnter the Pin code that Google Authenticator generates, and click \nRegister with two-factor app\n.\n\n\n\n\n\n\nIn the \nAccount\n page, click \nSet up new U2F device\n.\n\n\n\n\n\n\n\n\nWhen the BLUE LED begins to blink, press the button on the key.\n\n\n\n\n\n\nGive it a name and register it with the GitLab server.\n\n\n\n\n\n\n\n\nYour device was successfully set up!\n\n\n\n\n\n\n\n\nSigning in using your key\n\n\nNow you can sign in to your GitLab account with the security key you add before.\n\n\n\n\n\n\nOn your computer, \nsign in to GitLab\n. \n\n\n\n\n\n\nInsert your security key into the USB port.\n\n\n\n\n\n\n\n\nWhen the BLUE LED begins to blink, press the button on the key.\n\n\n\n\n\n\nCongratulations!\n You can use your key each time you sign in to your GitLab account.\n\n\nCreate an Issue\n\n\nInterested in contributing to this project? Want to report a bug? Feel free to click here:\n\n\n Create an Issue", 
+            "title": "Using nRF52-U2F with GitLab"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-gitlab/#using-nrf52-u2f-security-key-with-gitlab", 
+            "text": "This guide describes how to use the nRF52 U2F Security Key with GitLab.", 
+            "title": "Using nRF52 U2F Security Key with GitLab"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-gitlab/#requirements", 
+            "text": "Latest version of Google Chrome browser (or at least version 38) or Opera browser    nRF52840-MDK  or  nRF52840 Micro Dev Kit USB Dongle  with the nRF52-U2F firmware    A GitLab Account     Note  If no firmware available, please follow these guides to prepare the correct firmware:  Upgrading the firmware  or  Building the firmware .", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-gitlab/#setting-up-your-gitlab-account", 
+            "text": "In Google Chrome or Opera, log in to  GitLab .    Click the profile photo at the top right, and then click  Settings .    In the  Account  page, click  Enable two-factor authentication  button.    Download the Google Authenticator application from App Store or Google Play Store and scan the QR code.    Enter the Pin code that Google Authenticator generates, and click  Register with two-factor app .    In the  Account  page, click  Set up new U2F device .     When the BLUE LED begins to blink, press the button on the key.    Give it a name and register it with the GitLab server.     Your device was successfully set up!", 
+            "title": "Setting Up Your GitLab Account"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-gitlab/#signing-in-using-your-key", 
+            "text": "Now you can sign in to your GitLab account with the security key you add before.    On your computer,  sign in to GitLab .     Insert your security key into the USB port.     When the BLUE LED begins to blink, press the button on the key.    Congratulations!  You can use your key each time you sign in to your GitLab account.", 
+            "title": "Signing in using your key"
+        }, 
+        {
+            "location": "/guides/using-u2f-with-gitlab/#create-an-issue", 
+            "text": "Interested in contributing to this project? Want to report a bug? Feel free to click here:   Create an Issue", 
+            "title": "Create an Issue"
+        }
+    ]
+}
