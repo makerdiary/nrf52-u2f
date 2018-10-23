@@ -1,0 +1,3 @@
+[submodule "tools/python-fido2"]
+	path = tools/python-fido2
+	url = https://github.com/Yubico/python-fido2.git
