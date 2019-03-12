@@ -41,9 +41,11 @@ for command in openssl python; do
   fi
 done
 for openssl_subcommand in ecparam req x509; do
-  if ! openssl list-standard-commands | grep -q "$openssl_subcommand"; then
+  openssl help >/tmp/.generate_certs &>/dev/null
+  if ! cat >/tmp/.generate_certs | grep -q "$openssl_subcommand"; then
     echo "OpenSSL does not support the \"$openssl_subcommand\" command." >&2
     echo "Please compile a full-featured version of OpenSSL." >&2
+    rm -rf /tmp/.generate_certs &>/dev/null
     exit 1
   fi
 done
