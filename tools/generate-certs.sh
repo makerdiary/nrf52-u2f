@@ -41,11 +41,11 @@ for command in openssl python; do
   fi
 done
 for openssl_subcommand in ecparam req x509; do
-  openssl help >/tmp/.generate_certs &>/dev/null
-  if ! cat >/tmp/.generate_certs | grep -q "$openssl_subcommand"; then
+  openssl help &> /tmp/.generate_certs
+  if ! grep -q $openssl_subcommand /tmp/.generate_certs; then
     echo "OpenSSL does not support the \"$openssl_subcommand\" command." >&2
     echo "Please compile a full-featured version of OpenSSL." >&2
-    rm -rf /tmp/.generate_certs &>/dev/null
+    rm -f /tmp/.generate_certs
     exit 1
   fi
 done
@@ -56,13 +56,13 @@ cd "$workdir"
 
 # Generate CA key and certificate
 openssl ecparam -genkey -name prime256v1 -out ca.key
-openssl req -x509 -new -batch -SHA256 -nodes -key ca.key -days 3650 -out ca.crt
+openssl req -config myserver.cnf -x509 -new -batch -SHA256 -nodes -key ca.key -days 3650 -out ca.crt
 
 # Generate attestation key
 openssl ecparam -genkey -name prime256v1 -out attestation.key
 
 # Sign the attestation key with the certificate
-openssl req -new -batch -SHA256 -key attestation.key -nodes -out attestation.csr
+openssl req -config myserver.cnf -new -batch -SHA256 -key attestation.key -nodes -out attestation.csr
 openssl x509 -req -SHA256 -days 3650 -in attestation.csr -CA ca.crt -CAkey ca.key -CAcreateserial -outform DER -out attestation.der 2>/dev/null
 
 # Print private key.
