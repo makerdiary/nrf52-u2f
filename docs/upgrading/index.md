@@ -55,7 +55,7 @@ Run the following command to upgrade the U2F firmware, where:
 * `<serial-port>` is the serial port address to which the device is connected. (e.g. `COM1` in windows systems, `/dev/ttyACM0` in linux/mac).
 
 ``` sh
-nrfutil dfu usb_serial -pkg <package-path> -p <serial-port>
+nrfutil dfu usb-serial -pkg <package-path> -p <serial-port>
 ```
 
 ![](images/upgrading-app-with-nrfutil.png)
