@@ -95,12 +95,23 @@ For more security, remember to generate a new attestation key and certificate.
 Change to the `tools` directory, run the `generate-certs.sh` to generate a new attestation key and certificate:
 
 ``` sh
+$ cp ./certs/myserver.cnf.example ./certs/myserver.cnf
+
 $ cd ./nrf52-u2f/tools
 
 $ ./generate-certs.sh
 ```
 
 If successfully completed, the private key and certificate are stored in `certs/keys.c` file.
+
+## Get micro-ecc library
+
+```sh
+cd nrf_sdks/nRF5_SDK_15.2.0_9412b96/external/micro-ecc
+git clone https://github.com/kmackay/micro-ecc.git
+cd nrf52hf_armgcc/armgcc
+make
+```
 
 ## Build the U2F Firmware
 
