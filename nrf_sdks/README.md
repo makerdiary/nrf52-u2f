@@ -39,3 +39,5 @@ GNU_INSTALL_ROOT := $(HOME)/gcc-arm-none-eabi/gcc-arm-none-eabi-6-2017-q2-update
 GNU_VERSION := 6.3.1
 GNU_PREFIX := arm-none-eabi
 ```
+
+> To avoid some known compilation errors, some precompiled static link library files have been added to the `nrf_sdks` directory. For more information, please refer to: [micro-ecc](http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v15.0.0%2Flib_crypto_backend_micro_ecc.html)

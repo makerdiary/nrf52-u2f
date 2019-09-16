@@ -277,7 +277,7 @@ INC_FOLDERS += \
 # Libraries common to all targets
 LIB_FILES += \
   $(SDK_ROOT)/external/nrf_cc310/lib/libnrf_cc310_0.9.10.a \
-  $(SDK_ROOT)/external/micro-ecc/nrf52hf_armgcc/armgcc/micro_ecc_lib_nrf52.a \
+  $(SDK_ROOT)/../micro_ecc_lib_nrf52.a \
   $(SDK_ROOT)/external/nrf_oberon/lib/nrf52/liboberon_2.0.5.a \
 
 # Optimization flags
